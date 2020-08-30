@@ -7,7 +7,10 @@ import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
 import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles({
   root: { 
@@ -29,13 +32,25 @@ const useStyles = makeStyles({
     height: '360px',
     padding: '2rem',
     backgroundColor: '#90A4AE',
+    color: '#009688'
   },
   card: {
     color: '#2196F3',
     '& a, p': {
       color: '#673AB7'
-    },
-    height: '25rem'
+    }
+  },
+  media: {
+    backgroundColor: '#4DD0E1',
+    boxSizing: "border-box",
+    height: '12rem',
+  },
+  button: {    
+    color: '#673AB7',
+    '&:hover': {
+      backgroundColor: '#673AB7',
+      color: '#EEEEEE'
+    }
   },
   footer: {
     padding: '2rem',
@@ -52,7 +67,7 @@ export default function Home() {
       <CssBaseline/>
       <Container maxWidth="md">
         <Grid item xs={12} md={12} >
-          <Paper className={classes.header}>        
+          <Paper className={classes.header} square>        
             <h2>Home page</h2>
             <Link to="/about">About Us</Link>
           </Paper> 
@@ -63,44 +78,79 @@ export default function Home() {
           spacing={2}
         >
           <Grid item xs={12} md={12} >
-            <Paper className={classes.slider}>        
-              <Box>Images</Box>
+            <Paper className={classes.slider} square>        
+              <h2>Images</h2>
             </Paper>
           </Grid>
           <Grid item xs={12} md >
-            <Card className={classes.card}>
+            <Card className={classes.card} square>             
+              <CardMedia
+                className={classes.media}
+                image=""
+                title="Contemplative Reptile"
+              />
               <CardContent>
                 <h2>Box 1</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque magni, ea saepe fuga obcaecati aliquam cumque minima ducimus dicta accusamus velit vero veritatis omnis assumenda iure soluta id eos repudiandae nulla exercitationem.</p>
-              </CardContent>
+              </CardContent>            
+              <CardActions>
+                <Button size="small" className={classes.button}>
+                  More
+                </Button>
+              </CardActions>  
             </Card>
           </Grid>
           <Grid item xs={12} md >
-            <Card className={classes.card}>
+            <Card className={classes.card} square>             
+              <CardMedia
+                className={classes.media}
+                image=""
+                title="Contemplative Reptile"
+              />
               <CardContent>
                 <h2>Box 2</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque magni, ea saepe fuga obcaecati aliquam cumque minima ducimus dicta accusamus velit vero veritatis omnis assumenda iure soluta id eos repudiandae nulla exercitationem.</p>
               </CardContent>
+              <CardActions>
+                <Button size="small" className={classes.button}>
+                  More
+                </Button>
+              </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} md >
-            <Card className={classes.card}>
+            <Card className={classes.card} square>
+              <CardMedia
+                className={classes.media}
+                image=""
+                title="Contemplative Reptile"
+              />
               <CardContent>
                 <h2>Box 3</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque magni, ea saepe fuga obcaecati aliquam cumque minima ducimus dicta accusamus velit vero veritatis omnis assumenda iure soluta id eos repudiandae nulla exercitationem.</p> 
               </CardContent>
+              <CardActions>
+                <Button size="small" className={classes.button}>
+                  More
+                </Button>
+              </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} md={12} >
-            <Card className={classes.card}>
+            <Card className={classes.card} elevation={3} square>
               <CardContent>
                 <h2>Box 4</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque magni, ea saepe fuga obcaecati aliquam cumque minima ducimus dicta accusamus velit vero veritatis omnis assumenda iure soluta id eos repudiandae nulla exercitationem.</p> 
               </CardContent>
+              <CardActions>
+                <Button size="small" className={classes.button}>
+                  More
+                </Button>
+              </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} md={12} >
-            <Paper className={classes.footer}>        
+            <Paper className={classes.footer} square>        
               <h2>Footer</h2>              
             </Paper> 
           </Grid>
