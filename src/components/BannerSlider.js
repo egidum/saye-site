@@ -19,7 +19,7 @@ export default function BannerSlider() {
   return (
     <Grid item xs={12} md={12}>
       <Paper className={classes.banner} square>
-        <h2>Images</h2>
+        <h2>Banner</h2>
       </Paper>
     </Grid>
   )

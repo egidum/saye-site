@@ -6,9 +6,7 @@ import Grid from "@material-ui/core/Grid"
 import Card from "@material-ui/core/Card"
 import CardActions from "@material-ui/core/CardActions"
 import CardContent from "@material-ui/core/CardContent"
-import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
-import "fontsource-cuprum"
 
 const useStyles = makeStyles({
   link: {
@@ -18,11 +16,6 @@ const useStyles = makeStyles({
       color: "blue",
     },
     textTransform: "uppercase",
-  },
-  media: {
-    backgroundColor: "#4DD0E1",
-    boxSizing: "border-box",
-    height: "12rem",
   },
   title: {
     fontFamily: "Cuprum",
@@ -36,17 +29,12 @@ const useStyles = makeStyles({
   },
 })
 
-export default function FlashCard({ title, props }) {
+export default function Introduction() {
   const classes = useStyles()
 
   return (
-    <Grid item xs={12} md>
-      <Card square>
-        <CardMedia
-          className={classes.media}
-          image=""
-          title="Contemplative Reptile"
-        />
+    <Grid item xs={12} md={12}>
+      <Card className={classes.card} elevation={3} square>
         <CardContent>
           <Typography
             className={classes.title}
@@ -54,21 +42,32 @@ export default function FlashCard({ title, props }) {
             component="h2"
             gutterBottom
           >
-            <Link className={classes.link} to="/services">
-              {title}
+            <Link className={classes.link} to="/about">
+              Why You Should Hire Us
             </Link>
           </Typography>
           <Typography className={classes.content} variant="body1" component="p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            magni, ea saepe fuga obcaecati aliquam cumque minima ducimus dicta
-            accusamus velit vero veritatis omnis assumenda iure soluta id eos
-            repudiandae nulla exercitationem.
+            Here are just a few reasons why you should hire us
+            <ul>
+              <li>In-depth Experience: 10+ years in business.</li>
+              <li>Effective Results. We do the work anyway.</li>
+              <li>You get the expertise you need.</li>
+              <li>
+                We’re always here. We work irregular hours, often more than the
+                5 days a week.
+              </li>
+              <li>
+                No matter what business you’re in, We can help you do more of
+                it.
+              </li>
+              <li>Business Owners Love Working With Us.</li>
+            </ul>
           </Typography>
         </CardContent>
         <CardActions>
           <Button size="small" className={classes.button}>
-            <Link className={classes.link} to="/services">
-              More {props}...
+            <Link className={classes.link} to="/about">
+              More About Us...
             </Link>
           </Button>
         </CardActions>

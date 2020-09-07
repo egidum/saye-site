@@ -4,11 +4,6 @@ import Grid from "@material-ui/core/Grid"
 import Paper from "@material-ui/core/Paper"
 
 const useStyles = makeStyles({
-  root: {
-    backgroundColor: "#BDBDBD",
-    minHeight: "100vh",
-    paddingTop: "1rem",
-  },
   footer: {
     padding: "2rem",
     backgroundColor: "#673AB7",

@@ -4,18 +4,21 @@ import CssBaseline from "@material-ui/core/CssBaseline"
 import Container from "@material-ui/core/Container"
 import Grid from "@material-ui/core/Grid"
 import Box from "@material-ui/core/Box"
+import "fontsource-roboto"
+import "fontsource-open-sans"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import BannerSlider from "../components/BannerSlider"
 import FlashCard from "../components/FlashCard"
-import ContentCard from "../components/ContentCard"
+import Introduction from "../components/Introduction"
 
 const useStyles = makeStyles({
   root: {
     backgroundColor: "#BDBDBD",
     minHeight: "100vh",
     paddingTop: "1rem",
+    fontFamily: "Open Sans, Roboto, sans-serif",
   },
 })
 
@@ -30,10 +33,10 @@ export default function Home() {
 
         <Grid container direction="row" spacing={2}>
           <BannerSlider />
-          <FlashCard />
-          <FlashCard />
-          <FlashCard />
-          <ContentCard />
+          <FlashCard title="Brilliant Ideas" props="Ideas" />
+          <FlashCard title="Strong Support" props="Support" />
+          <FlashCard title="Smart Strategies" props="Strategies" />
+          <Introduction />
 
           <Footer />
         </Grid>
