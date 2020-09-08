@@ -33,9 +33,13 @@ export default function Home() {
 
         <Grid container direction="row" spacing={2}>
           <BannerSlider />
-          <FlashCard title="Brilliant Ideas" props="Ideas" />
-          <FlashCard title="Strong Support" props="Support" />
-          <FlashCard title="Smart Strategies" props="Strategies" />
+          <FlashCard title="Brilliant Ideas" more="Ideas" to="/ideas" />
+          <FlashCard title="Strong Support" more="Support" to="/support" />
+          <FlashCard
+            title="Smart Strategies"
+            more="Strategies"
+            to="/strategies"
+          />
           <Introduction />
 
           <Footer />

@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function FlashCard({ title, props }) {
+export default function FlashCard({ title, more, to }) {
   const classes = useStyles()
 
   return (
@@ -54,7 +54,7 @@ export default function FlashCard({ title, props }) {
             component="h2"
             gutterBottom
           >
-            <Link className={classes.link} to="/services">
+            <Link className={classes.link} to={to}>
               {title}
             </Link>
           </Typography>
@@ -67,8 +67,8 @@ export default function FlashCard({ title, props }) {
         </CardContent>
         <CardActions>
           <Button size="small" className={classes.button}>
-            <Link className={classes.link} to="/services">
-              More {props}...
+            <Link className={classes.link} to={to}>
+              More {more}...
             </Link>
           </Button>
         </CardActions>
