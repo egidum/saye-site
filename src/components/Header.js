@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
@@ -10,21 +8,11 @@ import CardMedia from '@material-ui/core/CardMedia'
 import NavButton from './NavButton'
 
 const useStyles = makeStyles({
-  header: {
+  root: {
     height: 120,
     marginTop: '2rem',
     marginBottom: '1rem',
     backgroundColor: '#fff',
-  },
-  nav: {
-    fontFamily: 'Cuprum',
-  },
-  link: {
-    textDecoration: 'none',
-    '&:hover': {
-      color: 'blue',
-    },
-    textTransform: 'uppercase',
   },
 })
 
@@ -32,7 +20,7 @@ export default function Home() {
   const classes = useStyles()
 
   return (
-    <Paper className={classes.header} square>
+    <Paper className={classes.root} component="header" square>
       <Grid container>
         {/* logo */}
         <Grid item xs={3}>
@@ -45,13 +33,15 @@ export default function Home() {
         </Grid>
         {/* navigation */}
         <Grid item xs>
-          <Grid container direction="row">
-            <NavButton title="Company" to="/" />
-            <NavButton title="Services" to="/services" />
-            <NavButton title="Solutions" />
-            <NavButton title="Stories" />
-            <NavButton title="Contacts" to="/contacts" />
-          </Grid>
+          <Box component="nav">
+            <Grid container direction="row" justify="center">
+              <NavButton title="Company" to="/" />
+              <NavButton title="Services" to="/services" />
+              <NavButton title="Solutions" />
+              <NavButton title="Stories" />
+              <NavButton title="Contacts" to="/contacts" />
+            </Grid>
+          </Box>
         </Grid>
       </Grid>
     </Paper>

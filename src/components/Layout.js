@@ -5,7 +5,6 @@ import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import ImgWebP from '../images/body.webp'
 import 'fontsource-roboto'
-import 'fontsource-open-sans'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -15,6 +14,7 @@ const useStyles = makeStyles({
     background: `url(${ImgWebP}) center top repeat`,
     minHeight: '100vh',
     paddingTop: '1rem',
+    paddingBottom: '1rem',
   },
 })
 
