@@ -1,38 +1,38 @@
-import React from "react"
-import { Link } from "gatsby"
-import Typography from "@material-ui/core/Typography"
-import { makeStyles } from "@material-ui/core/styles"
-import Grid from "@material-ui/core/Grid"
-import Card from "@material-ui/core/Card"
-import CardActions from "@material-ui/core/CardActions"
-import CardContent from "@material-ui/core/CardContent"
-import CardMedia from "@material-ui/core/CardMedia"
-import Button from "@material-ui/core/Button"
-import "fontsource-cuprum"
+import React from 'react'
+import { Link } from 'gatsby'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import 'fontsource-cuprum'
 
 const useStyles = makeStyles({
   link: {
-    color: "#2196F3",
-    textDecoration: "none",
-    "&:hover": {
-      color: "blue",
+    color: '#2196F3',
+    textDecoration: 'none',
+    '&:hover': {
+      color: 'blue',
     },
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   },
   media: {
-    backgroundColor: "#4DD0E1",
-    boxSizing: "border-box",
-    height: "12rem",
+    backgroundColor: '#4DD0E1',
+    boxSizing: 'border-box',
+    height: '12rem',
   },
   title: {
-    fontFamily: "Cuprum",
+    fontFamily: 'Cuprum',
   },
   content: {
-    color: "#757575",
+    color: '#757575',
   },
   button: {
-    color: "#2196F3",
-    fontFamily: "Cuprum",
+    color: '#2196F3',
+    fontFamily: 'Cuprum',
   },
 })
 
@@ -43,8 +43,10 @@ export default function FlashCard({ title, more, to }) {
     <Grid item xs={12} md>
       <Card square>
         <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
           className={classes.media}
-          image=""
+          image="/static/thomas-yohei--xtnm48u4uM-unsplash.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>

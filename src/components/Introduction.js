@@ -1,31 +1,31 @@
-import React from "react"
-import { Link } from "gatsby"
-import Typography from "@material-ui/core/Typography"
-import { makeStyles } from "@material-ui/core/styles"
-import Grid from "@material-ui/core/Grid"
-import Card from "@material-ui/core/Card"
-import CardActions from "@material-ui/core/CardActions"
-import CardContent from "@material-ui/core/CardContent"
-import Button from "@material-ui/core/Button"
+import React from 'react'
+import { Link } from 'gatsby'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles({
   link: {
-    color: "#2196F3",
-    textDecoration: "none",
-    "&:hover": {
-      color: "blue",
+    color: '#2196F3',
+    textDecoration: 'none',
+    '&:hover': {
+      color: 'blue',
     },
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   },
   title: {
-    fontFamily: "Cuprum",
+    fontFamily: 'Cuprum',
   },
   content: {
-    color: "#757575",
+    color: '#757575',
   },
   button: {
-    color: "#2196F3",
-    fontFamily: "Cuprum",
+    color: '#2196F3',
+    fontFamily: 'Cuprum',
   },
 })
 
