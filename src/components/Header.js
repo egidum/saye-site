@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function Home() {
+export default function Header() {
   const classes = useStyles()
 
   return (

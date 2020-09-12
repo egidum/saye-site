@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function BottomNav() {
+export default function SiteLinks() {
   const classes = useStyles()
 
   return (

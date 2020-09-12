@@ -18,8 +18,8 @@ export default function Services() {
   return (
     <Layout>
       <Grid container direction="row">
-        <Grid item xs={12} md>
-          <Paper className={classes.root}>
+        <Grid item xs={12}>
+          <Paper className={classes.root} square>
             <h2>Services</h2>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. In modi

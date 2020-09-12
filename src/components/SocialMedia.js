@@ -24,13 +24,13 @@ const useStyles = makeStyles({
   },
 })
 
-export default function SocialLInks() {
+export default function SociaMedia() {
   const classes = useStyles()
 
   return (
     <Box component="section">
       <Typography className={classes.title} variant="subtitle1" gutterBottom>
-        Social links
+        Follow us on
       </Typography>
       <Typography className={classes.subtitle} variant="caption" gutterBottom>
         <Box mt={3}>

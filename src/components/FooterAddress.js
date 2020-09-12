@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function Address() {
+export default function FooterAddress() {
   const classes = useStyles()
 
   return (

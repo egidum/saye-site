@@ -4,9 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
 
-import Address from './Address'
-import SocialLinks from './SocialLinks'
-import BottomNav from './BottomNav'
+import FooterAddress from './FooterAddress'
+import SocialMedia from './SocialMedia'
+import SiteLinks from './SiteLinks'
 import Copyright from './Copyright'
 
 const useStyles = makeStyles({
@@ -35,10 +35,10 @@ export default function Footer() {
       <Paper className={classes.footer} component="footer" square>
         <Grid container>
           <Grid item xs={12} md>
-            <Address />
+            <FooterAddress />
           </Grid>
           <Grid item xs={12} md={2}>
-            <SocialLinks />
+            <SocialMedia />
           </Grid>
         </Grid>
         <Grid container>
@@ -50,7 +50,7 @@ export default function Footer() {
         </Grid>
         <Grid container>
           <Grid item xs={12} md={12}>
-            <BottomNav />
+            <SiteLinks />
           </Grid>
         </Grid>
       </Paper>
