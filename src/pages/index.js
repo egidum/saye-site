@@ -1,5 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
+
 import Layout from '../components/Layout'
 import BannerSlider from '../components/BannerSlider'
 import FlashCard from '../components/FlashCard'

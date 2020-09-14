@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function Services() {
+export default function Service1() {
   const classes = useStyles()
 
   return (
@@ -33,15 +33,18 @@ export default function Services() {
         <Link className={classes.link} to={'/'}>
           <Typography variant="body2">Home</Typography>
         </Link>
+        <Link className={classes.link} to={'/services'}>
+          <Typography variant="body2">Services</Typography>
+        </Link>
         <Typography variant="body2" color="textPrimary">
-          Services
+          Service One
         </Typography>
       </Breadcrumbs>
       <Grid container direction="row">
         <Grid item xs={12}>
           <Paper className={classes.root} square>
             <Typography className={classes.title} variant="h5" gutterBottom>
-              Services
+              Service One
             </Typography>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. In modi
@@ -64,9 +67,6 @@ export default function Services() {
               porro eius dolor ad ipsam eaque voluptates! Accusamus provident
               obcaecati assumenda, sapiente eum in?
             </p>
-            <Link className={classes.link} to={'/service1'}>
-              <Typography variant="body2">Service One</Typography>
-            </Link>
           </Paper>
         </Grid>
       </Grid>
