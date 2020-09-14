@@ -1,4 +1,5 @@
 import React from 'react'
+import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
@@ -8,7 +9,13 @@ import Layout from '../components/Layout'
 
 const useStyles = makeStyles({
   root: {
-    height: '60vh',
+    minHeight: '70vh',
+    marginTop: '1rem',
+    padding: '1.5rem',
+  },
+  title: {
+    fontFamily: 'Cuprum',
+    textTransform: 'uppercase',
   },
 })
 
@@ -20,7 +27,9 @@ export default function Services() {
       <Grid container direction="row">
         <Grid item xs={12}>
           <Paper className={classes.root} square>
-            <h2>Services</h2>
+            <Typography className={classes.title} variant="h5" gutterBottom>
+              Services
+            </Typography>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. In modi
               rem dolore soluta rerum suscipit, qui est necessitatibus itaque
