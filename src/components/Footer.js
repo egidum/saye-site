@@ -1,4 +1,5 @@
 import React from 'react'
+import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
@@ -7,7 +8,6 @@ import Paper from '@material-ui/core/Paper'
 import FooterAddress from './FooterAddress'
 import SocialMedia from './SocialMedia'
 import SiteLinks from './SiteLinks'
-import Copyright from './Copyright'
 
 const useStyles = makeStyles({
   root: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     backgroundColor: '#373839',
     color: '#fff',
   },
-  copy: {
+  copyright: {
     color: '#828387',
   },
   separator: {
@@ -54,8 +54,11 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Paper>
-      <Box className={classes.copy} my={2}>
-        <Copyright />
+      <Box className={classes.copyright} my={2}>
+        <Typography variant="caption">
+          {'SAYE © 2009'} {'-'} {new Date().getFullYear()}
+          {'.'}
+        </Typography>
       </Box>
     </Box>
   )
