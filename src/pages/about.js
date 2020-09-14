@@ -41,7 +41,7 @@ export default function About() {
         <Grid item xs={12}>
           <Paper className={classes.root} square>
             <Typography className={classes.title} variant="h5" gutterBottom>
-              About us
+              About Saye
             </Typography>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. In modi

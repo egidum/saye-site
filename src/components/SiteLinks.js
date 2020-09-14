@@ -18,7 +18,10 @@ export default function SiteLinks() {
   return (
     <Box component="section" display="flex" flexWrap="wrap">
       <Link className={classes.link} to={'/'}>
-        <Typography variant="caption">Company</Typography>
+        <Typography variant="caption">Home</Typography>
+      </Link>
+      <Link className={classes.link} to={'/about'}>
+        <Typography variant="caption">About Saye</Typography>
       </Link>
       <Link className={classes.link} to={'/contacts'}>
         <Typography variant="caption">Contacts</Typography>
