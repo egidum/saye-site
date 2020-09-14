@@ -35,7 +35,14 @@ const useStyles = makeStyles(theme => ({
     },
   },
   btn: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(3),
+    background: 'linear-gradient(45deg, #373839 30%, #A09E9F 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(160, 158, 159, .3)',
+    color: 'white',
+    height: 42,
+    width: '25ch',
   },
 }))
 
@@ -54,7 +61,6 @@ export default function ContactForm() {
       </Typography>
       <form
         className={classes.root}
-        noValidate
         autoComplete="off"
         name="contact"
         method="POST"
@@ -65,25 +71,24 @@ export default function ContactForm() {
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
         <TextField
-          required
           id="standard-basic"
           label="Name"
           helperText="John Doe"
           fullWidth
+          required
           type="text"
           name="name"
         />
         <TextField
-          required
           id="standard-basic"
           label="Email address"
           helperText="example@example.com"
           fullWidth
+          required
           type="email"
           name="email"
         />
         <TextField
-          required
           id="standard-select"
           select
           label="Subject"
@@ -91,6 +96,7 @@ export default function ContactForm() {
           onChange={handleChange}
           helperText="Please select your subject"
           fullWidth
+          required
           name="subjects[]"
           multiple
         >
@@ -101,7 +107,6 @@ export default function ContactForm() {
           ))}
         </TextField>
         <TextField
-          required
           id="standard-textarea"
           label="Message"
           placeholder=""
@@ -109,13 +114,12 @@ export default function ContactForm() {
           rows={4}
           helperText="Write your message here"
           fullWidth
+          required
           name="message"
         />
-        <div className={classes.btn}>
-          <Button variant="contained" type="submit">
-            Send
-          </Button>
-        </div>
+        <Button className={classes.btn} type="submit">
+          Send
+        </Button>
       </form>
     </React.Fragment>
   )
