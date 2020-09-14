@@ -34,11 +34,15 @@ const useStyles = makeStyles(theme => ({
       marginRight: theme.spacing(1),
     },
   },
+  title: {
+    fontFamily: 'Cuprum',
+    textTransform: 'uppercase',
+  },
   btn: {
     marginTop: theme.spacing(3),
     background: 'linear-gradient(45deg, #373839 30%, #A09E9F 90%)',
     border: 0,
-    borderRadius: 3,
+    borderRadius: 0,
     boxShadow: '0 3px 5px 2px rgba(160, 158, 159, .3)',
     color: 'white',
     height: 42,
@@ -56,7 +60,7 @@ export default function ContactForm() {
 
   return (
     <React.Fragment>
-      <Typography variant="h5" gutterBottom>
+      <Typography className={classes.title} variant="h5" gutterBottom>
         Contact Form
       </Typography>
       <form
@@ -72,6 +76,7 @@ export default function ContactForm() {
         <input type="hidden" name="form-name" value="contact" />
         <TextField
           id="standard-basic"
+          autoFocus
           label="Name"
           helperText="John Doe"
           fullWidth

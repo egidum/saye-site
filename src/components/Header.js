@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
 import CardMedia from '@material-ui/core/CardMedia'
+import Hidden from '@material-ui/core/Hidden'
 
 import NavButton from './NavButton'
 
@@ -35,11 +36,13 @@ export default function Header() {
         <Grid item xs>
           <Box component="nav">
             <Grid container direction="row" justify="center">
-              <NavButton title="Company" to="/" />
-              <NavButton title="Services" to="/services" />
-              <NavButton title="Solutions" />
-              <NavButton title="Stories" />
-              <NavButton title="Contacts" to="/contacts" />
+              <Hidden smDown>
+                <NavButton title="Company" to="/" />
+                <NavButton title="Services" to="/services" />
+                <NavButton title="Solutions" />
+                <NavButton title="Stories" />
+                <NavButton title="Contacts" to="/contacts" />
+              </Hidden>
             </Grid>
           </Box>
         </Grid>

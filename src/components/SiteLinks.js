@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   link: {
     textDecoration: 'none',
     color: '#a09e9f',
-    padding: '3rem 1rem 0 0',
+    padding: '0.5rem 1rem 0.5rem 0',
   },
 })
 
@@ -16,7 +16,7 @@ export default function SiteLinks() {
   const classes = useStyles()
 
   return (
-    <Box component="section">
+    <Box component="section" display="flex" flexWrap="wrap">
       <Link className={classes.link} to={'/'}>
         <Typography variant="caption">Company</Typography>
       </Link>
