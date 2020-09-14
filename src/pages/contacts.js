@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import Breadcrumbs from '@material-ui/core/Breadcrumbs'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
@@ -13,6 +15,9 @@ const useStyles = makeStyles({
     minHeight: '70vh',
     marginTop: '1rem',
     padding: '1.5rem',
+  },
+  link: {
+    color: 'inherit',
   },
   title: {
     fontFamily: 'Cuprum',
@@ -35,11 +40,19 @@ export default function Contacts() {
 
   return (
     <Layout>
+      <Breadcrumbs separator="»" aria-label="breadcrumb">
+        <Link className={classes.link} to={'/'}>
+          <Typography variant="body2">Home</Typography>
+        </Link>
+        <Typography variant="body2" color="textPrimary">
+          Contacts
+        </Typography>
+      </Breadcrumbs>
       <Grid container direction="row">
         <Grid item xs={12}>
           <Paper className={classes.root} component="main" square>
             <Grid container spacing={2}>
-              <Grid component="section" item xs={12} md={6}>
+              <Grid item component="section" xs={12} md={6}>
                 <Typography className={classes.title} variant="h5" gutterBottom>
                   Our Location
                 </Typography>
@@ -47,11 +60,11 @@ export default function Contacts() {
               </Grid>
             </Grid>
             <Grid container spacing={4}>
-              <Grid component="section" item xs={12} md={6}>
+              <Grid item component="section" xs={12} md={6}>
                 <ContactForm />
               </Grid>
 
-              <Grid component="section" item xs={12} md={6}>
+              <Grid item component="section" xs={12} md={6}>
                 <Typography className={classes.title} variant="h5" gutterBottom>
                   Contact Information
                 </Typography>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import Breadcrumbs from '@material-ui/core/Breadcrumbs'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
@@ -13,6 +15,9 @@ const useStyles = makeStyles({
     marginTop: '1rem',
     padding: '1.5rem',
   },
+  link: {
+    color: 'inherit',
+  },
   title: {
     fontFamily: 'Cuprum',
     textTransform: 'uppercase',
@@ -24,6 +29,14 @@ export default function Services() {
 
   return (
     <Layout>
+      <Breadcrumbs separator="»" aria-label="breadcrumb">
+        <Link className={classes.link} to={'/'}>
+          <Typography variant="body2">Home</Typography>
+        </Link>
+        <Typography variant="body2" color="textPrimary">
+          Services
+        </Typography>
+      </Breadcrumbs>
       <Grid container direction="row">
         <Grid item xs={12}>
           <Paper className={classes.root} square>
