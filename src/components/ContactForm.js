@@ -76,7 +76,6 @@ export default function ContactForm() {
         <input type="hidden" name="form-name" value="contact" />
         <TextField
           id="standard-basic"
-          autoFocus
           label="Name"
           helperText="John Doe"
           fullWidth

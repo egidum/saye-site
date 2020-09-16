@@ -10,10 +10,10 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles({
   link: {
-    color: '#2196F3',
+    color: '#373839',
     textDecoration: 'none',
     '&:hover': {
-      color: 'blue',
+      color: '#a09e9f',
     },
     textTransform: 'uppercase',
   },
@@ -34,7 +34,7 @@ export default function Introduction() {
 
   return (
     <Grid item xs={12} md={12}>
-      <Card className={classes.card} elevation={3} square>
+      <Card className={classes.card} elevation={2} square>
         <CardContent>
           <Typography
             className={classes.title}

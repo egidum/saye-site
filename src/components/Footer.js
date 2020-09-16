@@ -31,8 +31,8 @@ export default function Footer() {
   const classes = useStyles()
 
   return (
-    <Box className={classes.root}>
-      <Paper className={classes.footer} component="footer" square>
+    <Box className={classes.root} component="footer">
+      <Paper className={classes.footer} elevation={2} square>
         <Grid container>
           <Grid item xs={12} md>
             <FooterAddress />
@@ -44,7 +44,7 @@ export default function Footer() {
         <Grid container>
           <Grid item xs={12} md={12}>
             <Box className={classes.separator} component="section" mb={3}>
-              <Box component="span">&nbsp;</Box>
+              <span>&nbsp;</span>
             </Box>
           </Grid>
         </Grid>

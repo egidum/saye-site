@@ -12,10 +12,10 @@ import 'fontsource-cuprum'
 
 const useStyles = makeStyles({
   link: {
-    color: '#2196F3',
+    color: '#373839',
     textDecoration: 'none',
     '&:hover': {
-      color: 'blue',
+      color: '#a09e9f',
     },
     textTransform: 'uppercase',
   },
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     color: '#757575',
   },
   button: {
-    color: '#2196F3',
+    color: '#373839',
     fontFamily: 'Cuprum',
   },
 })

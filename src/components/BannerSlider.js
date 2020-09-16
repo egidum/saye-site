@@ -8,8 +8,8 @@ const useStyles = makeStyles({
     width: '100%',
     height: '360px',
     padding: '2rem',
-    backgroundColor: '#90A4AE',
-    color: '#009688',
+    backgroundColor: '#a09e9f',
+    color: '#373839',
   },
 })
 
@@ -18,7 +18,7 @@ export default function BannerSlider() {
 
   return (
     <Grid item xs={12} md={12}>
-      <Paper className={classes.banner} square>
+      <Paper className={classes.banner} elevation={2} square>
         <h2>Banner</h2>
       </Paper>
     </Grid>
