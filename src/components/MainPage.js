@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     minHeight: '70vh',
     marginTop: '1rem',
     padding: '1.5rem',
+    background: '#f9f9f9',
   },
 })
 

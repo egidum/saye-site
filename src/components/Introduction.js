@@ -9,6 +9,15 @@ import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles({
+  card: {
+    background: '#f9f9f9',
+  },
+  title: {
+    fontFamily: 'Cuprum',
+  },
+  content: {
+    color: '#757575',
+  },
   link: {
     color: '#373839',
     textDecoration: 'none',
@@ -16,12 +25,6 @@ const useStyles = makeStyles({
       color: '#a09e9f',
     },
     textTransform: 'uppercase',
-  },
-  title: {
-    fontFamily: 'Cuprum',
-  },
-  content: {
-    color: '#757575',
   },
   button: {
     color: '#2196F3',

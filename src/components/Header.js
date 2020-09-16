@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     height: 120,
     marginTop: '2rem',
     marginBottom: '1rem',
+    background: '#f9f9f9',
   },
   logo: {
     width: 180,

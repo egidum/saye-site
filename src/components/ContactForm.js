@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     fontFamily: 'Cuprum',
     textTransform: 'uppercase',
   },
-  btn: {
+  button: {
     marginTop: theme.spacing(3),
     background: 'linear-gradient(45deg, #373839 30%, #A09E9F 90%)',
     border: 0,
@@ -121,7 +121,7 @@ export default function ContactForm() {
           required
           name="message"
         />
-        <Button className={classes.btn} type="submit">
+        <Button className={classes.button} type="submit">
           Send
         </Button>
       </form>

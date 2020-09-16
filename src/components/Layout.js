@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 
 const useStyles = makeStyles({
   root: {
-    background: `url(${body}) center top repeat`,
+    background: `url(${body}) center top repeat #f3f3f3`,
     minHeight: '100vh',
     paddingTop: '1rem',
     paddingBottom: '1rem',

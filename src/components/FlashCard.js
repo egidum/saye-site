@@ -11,13 +11,8 @@ import Button from '@material-ui/core/Button'
 import 'fontsource-cuprum'
 
 const useStyles = makeStyles({
-  link: {
-    color: '#373839',
-    textDecoration: 'none',
-    '&:hover': {
-      color: '#a09e9f',
-    },
-    textTransform: 'uppercase',
+  card: {
+    background: '#f9f9f9',
   },
   media: {
     backgroundColor: '#4DD0E1',
@@ -30,6 +25,14 @@ const useStyles = makeStyles({
   content: {
     color: '#757575',
   },
+  link: {
+    color: '#373839',
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#a09e9f',
+    },
+    textTransform: 'uppercase',
+  },
   button: {
     color: '#373839',
     fontFamily: 'Cuprum',
@@ -41,7 +44,7 @@ export default function FlashCard({ title, more, to }) {
 
   return (
     <Grid item xs={12} md>
-      <Card square>
+      <Card className={classes.card} elevation={2} square>
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
