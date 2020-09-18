@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     color: '#a09e9f',
     padding: '0.5rem 1rem 0.5rem 0',
   },
+  active: {
+    color: '#fff',
+  },
 })
 
 export default function SiteLinks() {
@@ -17,22 +20,34 @@ export default function SiteLinks() {
 
   return (
     <Box component="section" display="flex" flexWrap="wrap">
-      <Link className={classes.link} to={'/'}>
+      <Link className={classes.link} to={'/'} activeClassName={classes.active}>
         <Typography variant="caption">Home</Typography>
       </Link>
-      <Link className={classes.link} to={'/about'}>
+      <Link
+        className={classes.link}
+        to={'/about'}
+        activeClassName={classes.active}
+      >
         <Typography variant="caption">About Saye</Typography>
       </Link>
-      <Link className={classes.link} to={'/contacts'}>
+      <Link
+        className={classes.link}
+        to={'/contacts'}
+        activeClassName={classes.active}
+      >
         <Typography variant="caption">Contacts</Typography>
       </Link>
-      <Link className={classes.link} to={'/services'}>
+      <Link
+        className={classes.link}
+        to={'/services'}
+        activeClassName={classes.active}
+      >
         <Typography variant="caption">Services</Typography>
       </Link>
-      <Link className={classes.link}>
+      <Link className={classes.link} activeClassName={classes.active}>
         <Typography variant="caption">Solutions</Typography>
       </Link>
-      <Link className={classes.link}>
+      <Link className={classes.link} activeClassName={classes.active}>
         <Typography variant="caption">Stories</Typography>
       </Link>
     </Box>

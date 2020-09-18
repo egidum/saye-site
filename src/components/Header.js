@@ -7,6 +7,7 @@ import Hidden from '@material-ui/core/Hidden'
 
 import logo from '../images/saye-light-t.webp'
 import NavButton from './NavButton'
+import NavButtonDrop from './NavButtonDrop'
 
 const useStyles = makeStyles({
   root: {
@@ -56,9 +57,9 @@ export default function Header() {
           xs
         >
           <Hidden smDown>
-            <NavButton title="Company" to="/" />
-            <NavButton title="Services" to="/services" />
-            <NavButton title="Solutions" />
+            <NavButtonDrop title="Company" to="/" />
+            <NavButtonDrop title="Services" to="/services" />
+            <NavButtonDrop title="Solutions" />
             <NavButton title="Stories" />
             <NavButton title="Contacts" to="/contacts" />
           </Hidden>
