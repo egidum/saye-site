@@ -6,7 +6,10 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+  root: {
+    paddingBottom: theme.spacing(2),
+  },
   title: {
     fontFamily: 'Cuprum',
     textTransform: 'uppercase',
@@ -22,13 +25,13 @@ const useStyles = makeStyles({
       color: '#fff',
     },
   },
-})
+}))
 
 export default function SociaMedia() {
   const classes = useStyles()
 
   return (
-    <Box component="section">
+    <Box className={classes.root} component="section">
       <Typography className={classes.title} variant="subtitle1" gutterBottom>
         Follow us on
       </Typography>

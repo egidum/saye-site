@@ -4,7 +4,10 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+  root: {
+    paddingTop: theme.spacing(2),
+  },
   link: {
     textDecoration: 'none',
     color: '#a09e9f',
@@ -13,13 +16,18 @@ const useStyles = makeStyles({
   active: {
     color: '#fff',
   },
-})
+}))
 
 export default function SiteLinks() {
   const classes = useStyles()
 
   return (
-    <Box component="section" display="flex" flexWrap="wrap">
+    <Box
+      className={classes.root}
+      component="section"
+      display="flex"
+      flexWrap="wrap"
+    >
       <Link className={classes.link} to={'/'} activeClassName={classes.active}>
         <Typography variant="caption">Home</Typography>
       </Link>

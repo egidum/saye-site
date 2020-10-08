@@ -6,7 +6,10 @@ import HomeIcon from '@material-ui/icons/Home'
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk'
 import MailIcon from '@material-ui/icons/Mail'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+  root: {
+    paddingBottom: theme.spacing(2),
+  },
   title: {
     fontFamily: 'Cuprum',
     textTransform: 'uppercase',
@@ -25,19 +28,19 @@ const useStyles = makeStyles({
   icon: {
     verticalAlign: 'middle',
   },
-})
+}))
 
 export default function FooterAddress() {
   const classes = useStyles()
 
   return (
-    <Box component="address" fontStyle="normal">
+    <Box className={classes.root} component="address" fontStyle="normal">
       <Typography className={classes.title} variant="subtitle1" gutterBottom>
         Contacts
       </Typography>
       <Typography className={classes.subtitle} variant="caption" gutterBottom>
         <Box display="flex" flexWrap="wrap" mt={3}>
-          <Box mr={5}>
+          <Box mr={5} mb={1}>
             <Box className={classes.icon} component="span" mr={1}>
               <HomeIcon />
             </Box>
@@ -46,7 +49,7 @@ export default function FooterAddress() {
             </Box>
           </Box>
 
-          <Box mr={5}>
+          <Box mr={5} mb={1}>
             <Box className={classes.icon} component="span" mr={1}>
               <PhoneInTalkIcon />
             </Box>
@@ -55,7 +58,7 @@ export default function FooterAddress() {
             </Box>
           </Box>
 
-          <Box mr={5}>
+          <Box mr={5} mr={1}>
             <Box className={classes.icon} component="span" mr={1}>
               <MailIcon />
             </Box>

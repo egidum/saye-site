@@ -40,23 +40,19 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     marginTop: theme.spacing(3),
-    background: 'linear-gradient(45deg, #373839 30%, #A09E9F 90%)',
+    background: 'linear-gradient(45deg, #303030 30%, #a09e9f 90%)',
     border: 0,
     borderRadius: 0,
     boxShadow: '0 3px 5px 2px rgba(160, 158, 159, .3)',
     color: 'white',
     height: 42,
-    width: '25ch',
+    width: 200,
   },
 }))
 
 export default function ContactForm() {
   const classes = useStyles()
   const [subject, setSubject] = React.useState('')
-
-  const handleChange = event => {
-    setSubject(event.target.value)
-  }
 
   return (
     <React.Fragment>
@@ -68,7 +64,7 @@ export default function ContactForm() {
         autoComplete="off"
         name="contact"
         method="POST"
-        action="/thanks/"
+        action="/thanks"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
@@ -97,7 +93,9 @@ export default function ContactForm() {
           select
           label="Subject"
           value={subject}
-          onChange={handleChange}
+          onChange={event => {
+            setSubject(event.target.value)
+          }}
           helperText="Please select your subject"
           fullWidth
           required
@@ -122,7 +120,7 @@ export default function ContactForm() {
           name="message"
         />
         <Button className={classes.button} type="submit">
-          Send
+          <Typography variant="button">Send</Typography>
         </Button>
       </form>
     </React.Fragment>

@@ -4,28 +4,34 @@ import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
+import Divider from '@material-ui/core/Divider'
 
 import FooterAddress from './FooterAddress'
 import SocialMedia from './SocialMedia'
 import SiteLinks from './SiteLinks'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: '1rem',
+    marginTop: theme.spacing(2),
   },
   footer: {
-    padding: '2rem 1.5rem',
-    backgroundColor: '#373839',
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
+    backgroundColor: '#303030',
     color: '#fff',
   },
   copyright: {
-    color: '#828387',
+    color: '#848387',
+    marginTop: theme.spacing(2),
   },
   separator: {
-    borderBottom: '1px solid #59595a',
-    color: '#a09e9f',
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    backgroundColor: '#a09e9f',
   },
-})
+}))
 
 export default function Footer() {
   const classes = useStyles()
@@ -43,9 +49,7 @@ export default function Footer() {
         </Grid>
         <Grid container>
           <Grid item xs={12} md={12}>
-            <Box className={classes.separator} component="section" mb={3}>
-              <span>&nbsp;</span>
-            </Box>
+            <Divider className={classes.separator} />
           </Grid>
         </Grid>
         <Grid container>
@@ -54,7 +58,7 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Paper>
-      <Box className={classes.copyright} my={2}>
+      <Box className={classes.copyright}>
         <Typography variant="caption">
           {'SAYE © 2009'} {'-'} {new Date().getFullYear()}
           {'.'}
