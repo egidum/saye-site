@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   },
 })
 
-export default function FlashCard({ title, more, to }) {
+export default function FlashCard({ title, readmore, slug }) {
   const classes = useStyles()
 
   return (
@@ -47,10 +47,10 @@ export default function FlashCard({ title, more, to }) {
       <Card className={classes.card} elevation={2} square>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="Images"
           className={classes.media}
-          image="/static/thomas-yohei--xtnm48u4uM-unsplash.jpg"
-          title="Contemplative Reptile"
+          image="#"
+          title="Images"
         />
         <CardContent>
           <Typography
@@ -59,21 +59,18 @@ export default function FlashCard({ title, more, to }) {
             component="h2"
             gutterBottom
           >
-            <Link className={classes.link} to={to}>
+            <Link className={classes.link} to={slug}>
               {title}
             </Link>
           </Typography>
           <Typography className={classes.content} variant="body1" component="p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            magni, ea saepe fuga obcaecati aliquam cumque minima ducimus dicta
-            accusamus velit vero veritatis omnis assumenda iure soluta id eos
-            repudiandae nulla exercitationem.
+            Reikia komponentą FlashCard susieti su index failu
           </Typography>
         </CardContent>
         <CardActions>
           <Button size="small" className={classes.button}>
-            <Link className={classes.link} to={to}>
-              More {more}...
+            <Link className={classes.link} to={slug}>
+              {readmore} ...
             </Link>
           </Button>
         </CardActions>

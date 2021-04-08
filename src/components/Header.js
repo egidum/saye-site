@@ -123,13 +123,19 @@ export default function Header() {
                 />
                 <div className={classes.overlayContent}>
                   <Link className={classes.link} to="/">
-                    Company
+                    Home
                   </Link>
-                  <Link className={classes.link} to="/about">
-                    About us
+                  <Link className={classes.link} to="/company">
+                    Company
                   </Link>
                   <Link className={classes.link} to="/services">
                     Services
+                  </Link>
+                  <Link className={classes.link} to="/solutions">
+                    Solutions
+                  </Link>
+                  <Link className={classes.link} to="/stories">
+                    Stories
                   </Link>
                   <Link className={classes.link} to="/contacts">
                     Contacts
@@ -150,10 +156,10 @@ export default function Header() {
             justify="center"
             alignItems="center"
           >
-            <NavButtonDrop title="Company" to="/" />
+            <NavButtonDrop title="Company" to="/company" />
             <NavButtonDrop title="Services" to="/services" />
-            <NavButtonDrop title="Solutions" />
-            <NavButton title="Stories" />
+            <NavButtonDrop title="Solutions" to="/solutions" />
+            <NavButtonDrop title="Stories" to="/stories" />
             <NavButton title="Contacts" to="/contacts" />
           </Grid>
         </Hidden>

@@ -45,7 +45,7 @@ export default function Introduction() {
             component="h2"
             gutterBottom
           >
-            <Link className={classes.link} to="/about">
+            <Link className={classes.link} to="/company/about">
               Why You Should Hire Us
             </Link>
           </Typography>
@@ -69,8 +69,8 @@ export default function Introduction() {
         </CardContent>
         <CardActions>
           <Button size="small" className={classes.button}>
-            <Link className={classes.link} to="/about">
-              More About Us...
+            <Link className={classes.link} to="/company/about">
+              More About Us ...
             </Link>
           </Button>
         </CardActions>

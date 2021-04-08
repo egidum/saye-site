@@ -18,11 +18,11 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function Services({ data }) {
+export default function Stories({ data }) {
   const classes = useStyles()
 
   return (
-    <PageLayout tag="services">
+    <PageLayout tag="stories">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div>
           <Link className={classes.link} to={node.fields.slug}>
@@ -39,7 +39,7 @@ export default function Services({ data }) {
 }
 
 export const query = graphql`
-  query($eq: String = "services") {
+  query($eq: String = "stories") {
     allMarkdownRemark(filter: { frontmatter: { tag: { eq: $eq } } }) {
       edges {
         node {

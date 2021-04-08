@@ -11,13 +11,27 @@ export default function Company() {
     <Layout>
       <Grid container direction="row" spacing={2}>
         <BannerSlider />
-        <FlashCard title="Brilliant Ideas" more="Ideas" to="/ideas" />
-        <FlashCard title="Strong Support" more="Support" to="/support" />
+        <FlashCard
+          title="Brilliant Ideas"
+          readmore="More Ideas"
+          slug="/solutions/brilliant-ideas"
+        >
+          Content
+        </FlashCard>
+        <FlashCard
+          title="Strong Support"
+          readmore="More Support"
+          slug="/solutions/strong-support"
+        >
+          Content
+        </FlashCard>
         <FlashCard
           title="Smart Strategies"
-          more="Strategies"
-          to="/strategies"
-        />
+          readmore="More Strategies"
+          slug="/solutions/smart-strategies"
+        >
+          Content
+        </FlashCard>
         <Introduction />
       </Grid>
     </Layout>

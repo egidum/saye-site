@@ -64,7 +64,7 @@ export default function ContactForm() {
         autoComplete="off"
         name="contact"
         method="POST"
-        action="/thanks"
+        action="/contacts"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
