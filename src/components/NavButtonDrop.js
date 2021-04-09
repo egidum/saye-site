@@ -50,18 +50,75 @@ const useStyles = makeStyles({
   },
 })
 
-export default function NavButton({ title, to }) {
+export default function NavButton() {
   const classes = useStyles()
 
   return (
-    <Link className={classes.drop} to={to} activeClassName={classes.active}>
-      <Typography className={classes.title} variant="h6" component="h2">
-        {title}
-      </Typography>
-      <div className={classes.dropContent}>
-        <Link>Link 1</Link>
-        <Link>Link 2</Link>
-      </div>
-    </Link>
+    <>
+      <Link
+        className={classes.drop}
+        to="/company"
+        activeClassName={classes.active}
+      >
+        <Typography className={classes.title} variant="h6" component="h2">
+          Company
+        </Typography>
+        <div className={classes.dropContent}>
+          <Link to="/company/about">About</Link>
+          <Link to="/company/our-culture">Our Culture</Link>
+          <Link to="/company/faq">FAQ</Link>
+          <Link to="/company/testimonials">Testimonials</Link>
+        </div>
+      </Link>
+      <Link
+        className={classes.drop}
+        to="/services"
+        activeClassName={classes.active}
+      >
+        <Typography className={classes.title} variant="h6" component="h2">
+          Services
+        </Typography>
+        <div className={classes.dropContent}>
+          <Link to="/services/best-services">Best Services</Link>
+          <Link to="/services/service-one">Service One</Link>
+          <Link to="/services/service-two">Service Two</Link>
+          <Link to="/services/service-three">Service Three</Link>
+        </div>
+      </Link>
+      <Link
+        className={classes.drop}
+        to="/solutions"
+        activeClassName={classes.active}
+      >
+        <Typography className={classes.title} variant="h6" component="h2">
+          Solutions
+        </Typography>
+        <div className={classes.dropContent}>
+          <Link to="/solutions/master-solutions">Master Solutions</Link>
+          <Link to="/solutions/brilliant-ideas">Brilliant Ideas</Link>
+          <Link to="/solutions/smart-strategies">Smart Strategies</Link>
+          <Link to="/solutions/strong-support">Strong Support</Link>
+        </div>
+      </Link>
+      <Link
+        className={classes.drop}
+        to="/stories"
+        activeClassName={classes.active}
+      >
+        <Typography className={classes.title} variant="h6" component="h2">
+          Stories
+        </Typography>
+        <div className={classes.dropContent}>
+          <Link to="/stories/lorem-ipsum-dolor-sit-amet">
+            Lorem ipsum dolor sit amet
+          </Link>
+          <Link to="/stories/aspernatur-nostrum-quam">
+            Aspernatur nostrum quam
+          </Link>
+          <Link to="/stories/nobis-maiores-esse">Nobis maiores esse</Link>
+          <Link to="/stories/veniam-nostrum">Veniam nostrum</Link>
+        </div>
+      </Link>
+    </>
   )
 }

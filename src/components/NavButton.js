@@ -27,13 +27,17 @@ const useStyles = makeStyles({
   },
 })
 
-export default function NavButton({ title, to }) {
+export default function NavButton() {
   const classes = useStyles()
 
   return (
-    <Link className={classes.link} to={to} activeClassName={classes.active}>
+    <Link
+      className={classes.link}
+      to="/contacts"
+      activeClassName={classes.active}
+    >
       <Typography className={classes.title} variant="h6" component="h2">
-        {title}
+        Contacts
       </Typography>
     </Link>
   )

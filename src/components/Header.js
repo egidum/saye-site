@@ -156,11 +156,8 @@ export default function Header() {
             justify="center"
             alignItems="center"
           >
-            <NavButtonDrop title="Company" to="/company" />
-            <NavButtonDrop title="Services" to="/services" />
-            <NavButtonDrop title="Solutions" to="/solutions" />
-            <NavButtonDrop title="Stories" to="/stories" />
-            <NavButton title="Contacts" to="/contacts" />
+            <NavButtonDrop />
+            <NavButton />
           </Grid>
         </Hidden>
       </Grid>
